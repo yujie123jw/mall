@@ -9,7 +9,6 @@ import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.alipay.api.request.AlipayTradeQueryRequest;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
 import com.alipay.api.response.AlipayTradeQueryResponse;
-import com.macro.mall.mapper.OmsOrderMapper;
 import com.macro.mall.portal.config.AlipayConfig;
 import com.macro.mall.portal.domain.AliPayParam;
 import com.macro.mall.portal.service.AlipayService;
@@ -33,8 +32,6 @@ public class AlipayServiceImpl implements AlipayService {
     private AlipayConfig alipayConfig;
     @Autowired
     private AlipayClient alipayClient;
-    @Autowired
-    private OmsOrderMapper orderMapper;
     @Autowired
     private OmsPortalOrderService portalOrderService;
     @Override

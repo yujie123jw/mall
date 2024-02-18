@@ -5,6 +5,7 @@ import com.macro.mall.common.domain.SwaggerProperties;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -13,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+@Profile({"dev","local"})
 public class SwaggerConfig extends BaseSwaggerConfig {
 
     @Override
@@ -23,7 +25,7 @@ public class SwaggerConfig extends BaseSwaggerConfig {
                 .description("SpringBoot版本中的一些示例")
                 .contactName("macro")
                 .version("1.0")
-                .enableSecurity(true)
+                .enableSecurity(false)
                 .build();
     }
 

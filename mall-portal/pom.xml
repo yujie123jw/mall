@@ -47,7 +47,34 @@
             <artifactId>alipay-sdk-java</artifactId>
             <version>${alipay-sdk.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.16.1</version>
+            <scope>test</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.dingtalk.open</groupId>-->
+<!--            <artifactId>taobao-sdk-java-auto</artifactId>-->
+<!--            <version>1479188381469-20200703</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>D:/java/taobao-sdk-java-auto-1479188381469-20200703.jar</systemPath>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>htmlunit</artifactId>
+            <version>2.70.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.wechatpay-apiv3</groupId>
+            <artifactId>wechatpay-apache-httpclient</artifactId>
+            <version>0.4.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.wechatpay-apiv3</groupId>
+            <artifactId>wechatpay-java</artifactId>
+            <version>0.2.12</version>
+        </dependency>
     </dependencies>
 
     <build>

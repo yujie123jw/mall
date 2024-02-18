@@ -17,8 +17,7 @@ import springfox.documentation.spring.web.plugins.WebFluxRequestHandlerProvider;
 import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -35,7 +34,7 @@ public abstract class BaseSwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(swaggerProperties.getApiBasePackage()))
                 .paths(PathSelectors.any())
-                .build();
+                .build().protocols(newHashset());
         if (swaggerProperties.isEnableSecurity()) {
             docket.securitySchemes(securitySchemes()).securityContexts(securityContexts());
         }
@@ -114,6 +113,10 @@ public abstract class BaseSwaggerConfig {
         };
     }
 
+
+    private  final Set<String> newHashset(){
+        return  new LinkedHashSet<>(Arrays.asList("https","http"));
+    }
     /**
      * 自定义Swagger配置
      */
